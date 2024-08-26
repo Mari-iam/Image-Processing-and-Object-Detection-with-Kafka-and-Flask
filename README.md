@@ -1,1 +1,1 @@
-# Kafka-WebSocket
+# Image Processing and Object Detection with Kafka and Flask
