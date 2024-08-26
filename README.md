@@ -8,12 +8,12 @@ This project implements an image processing pipeline that integrates Kafka, Flas
 * YOLOv5
 * WebSocket library
 ## Usage
-### Start the Kafka consumer: 
+### 1-Start the Kafka consumer: 
 ### python consumer.py
 This script consumes messages from a Kafka topic, performs object detection on the received images using YOLOv5, updates the image labels via the Flask endpoint, and sends status updates to the WebSocket server.
 ### python bw_consumer.py
 This script consumes messages from a Kafka topic, converts the image to B&W, updates the image labels via the Flask endpoint, and sends status updates to the WebSocket server.
-### Run the Flask application:
+### 2-Run the Flask application:
 ### python server.py
 This script starts the Flask server which handles image label updates and communicates with the WebSocket server.
 ## Error Handling
