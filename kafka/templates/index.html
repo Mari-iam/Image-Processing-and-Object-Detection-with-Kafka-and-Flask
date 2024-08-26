@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Integration</title>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>WebSocket Integration</h1>
+    <div id="status"></div>
+    <script>
+        const socket = io.connect('http://localhost:5000');
+
+        // Listen for status messages from the server
+        socket.on('status', function(data) {
+            document.getElementById('status').innerText = data.message;
+        });
+
+        // Listen for image status updates
+        socket.on('image_status', function(data) {
+            // Handle image status update here
+            console.log('Image status:', data);
+            alert(`Image ${data.id} processed successfully.`);
+            // You can add code here to refresh the page or update the UI
+        });
+
+        // Example: Emit a test message
+        socket.emit('image_status', { id: 'test123', status: 'completed' });
+    </script>
+</body>
+</html>
