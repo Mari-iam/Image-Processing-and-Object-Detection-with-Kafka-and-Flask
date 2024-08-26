@@ -21,7 +21,8 @@ This script starts the Flask server which handles image label updates and commun
 * Upon successful processing, a completed message is sent to the mariam-mahmoud-completed Kafka topic and published to the WebSocket server.
 ## WebSocket Integration
 * The project includes WebSocket functionality to communicate task status updates (completed or error) with a web interface.
-* Status updates are sent to the WebSocket server, which then communicates with the browser to refresh tasks upon completion or failure.
+* Status updates are sent to the WebSocket server, which then communicates with t![3](https://github.com/user-attachments/assets/dc1d06d4-f9a6-456e-b708-764b28b08ef9)
+he browser to refresh tasks upon completion or failure.
 ## Troubleshooting
 * Ensure all services (Kafka, Flask server, WebSocket server) are running and properly configured.
 * Check logs for detailed error messages.
